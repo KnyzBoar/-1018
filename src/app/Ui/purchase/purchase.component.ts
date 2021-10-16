@@ -40,6 +40,7 @@ export class PurchaseComponent implements OnInit {
     }
     this.getPurchases();
   }
+  
   async changeStatus(index: number) {
     try {
       this.purchase = await this.httpDBService.getPurchase(index);

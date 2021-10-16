@@ -1,3 +1,32 @@
 {
-  "purchases": []
+  "purchases": [
+    {
+      "name": "Чебурек",
+      "amount": "1",
+      "status": "Не куплено",
+      "bought": false,
+      "id": 1
+    },
+    {
+      "name": "Бананы",
+      "amount": "10",
+      "status": "Не куплено",
+      "bought": false,
+      "id": 2
+    },
+    {
+      "name": "Шаурма",
+      "amount": "2",
+      "status": "Куплено",
+      "bought": true,
+      "id": 3
+    },
+    {
+      "name": "Идеальный вечер",
+      "amount": "1",
+      "status": "Куплено",
+      "bought": true,
+      "id": 4
+    }
+  ]
 }

@@ -4,7 +4,7 @@
             <thead>
                 <tr>
                     <th scope="col">id</th>
-                    <th scope="col">Наименование товара</th>
+                    <th scope="col">Товар</th>
                     <th scope="col">Количество</th>
                     <th scope="col">Статус</th>
                 </tr>
@@ -12,20 +12,18 @@
             <tbody>
              <tr *ngFor="let purchase of purchases" class = "mt-1">
                 <td>{{ purchase.id }}</td>
-                <td (click)="linkToItem(purchase.id)" >{{ purchase.name }}</td>
+                <td (click)="linkToItem(purchase.id)">{{ purchase.name }}</td>
 
                 <td >{{ purchase.amount }}</td>
 
                 <td (click)="changeStatus(purchase.id)" 
                 [ngClass]="{
-                    'statusBought':
-                    purchase.bought,
                     'statusNotBought':
                     !purchase.bought
                   }"
                 >{{ purchase.status }}</td>
 
-                <button class="ml-2 btn btn-danger btn-sm" style="background-color: rgb(255, 106, 106);"  (click) = "onDeletePurchase(purchase.id)">Удалить</button>
+                <button class="ml-2 btn btn-danger btn-sm" style="background-color: rgb(250, 0, 0);"  (click) = "onDeletePurchase(purchase.id)">Удалить</button>
             </tr>
         </tbody>
     </table>
