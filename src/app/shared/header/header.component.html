@@ -1,0 +1,16 @@
+<nav class="navbar navbar-expand-md navbar-light bg-light">
+    <a class="navbar-brand" [routerLink] = "'/'">Syomin</a>
+    <div class="navbar" >
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" [routerLink] = "'/'" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{ exact: true }">Информация <span class="sr-only"></span></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" [routerLink] = "'/purchases/item'" [routerLinkActive] = "'active'" [routerLinkActiveOptions]="{ exact: true }">Форма добавления<span class="sr-only"></span></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" [routerLink] = "'/purchases'" [routerLinkActive] = "'active'" [routerLinkActiveOptions]="{ exact: true }">Покупки <span class="sr-only"></span></a>
+        </li>
+      </ul>
+    </div>
+  </nav>

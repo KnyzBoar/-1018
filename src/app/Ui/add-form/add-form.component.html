@@ -1,0 +1,50 @@
+<div class="container">
+    <div class="row">
+        <form [formGroup]="purchForm">
+            <div class="row">
+                <div class="col-12 mt-3">
+                    <div class="form-group">
+                        <label for="name">Название продукта</label>
+                        <input type="text" class="form-control" id="name" placeholder="Название продукта"
+                            formControlName="name" 
+                            [ngClass]="{
+                                'error':
+                                purchForm.get('name')?.invalid &&
+                                purchForm.get('name')?.touched
+                              }"
+                            />
+                        <small id="nameBottomLabel" class="form-text text-muted">Обязательное поле, длинной до 100
+                            символов.</small>
+                    </div>
+                </div>
+                <div class="col-12 mt-3">
+                    <div class="form-group">
+                        <label for="amount">Количество</label>
+                        <input type="text" class="form-control" id="amount" placeholder="Количество продукта"
+                            formControlName="amount"
+                            [ngClass]="{
+                                'error':
+                                purchForm.get('amount')?.invalid &&
+                                purchForm.get('amount')?.touched
+                              }"
+                             />
+                        <small id="amountBottomLabel" class="form-text text-muted">Обязательное поле, длинной до 100
+                            символов.</small>
+                    </div>
+                </div>
+            </div> <br>
+            <div class="row">
+                <div class="col-12">
+                    <button class="btn btn-success"  [disabled]="purchForm.invalid" (click) = "addPurchase()">
+                        Сохранить
+                    </button>
+                    <button class="btn btn-primary ms-2" (click) = "getClear()">Очистить форму</button>
+                    <button class="btn btn-danger ms-2" *ngIf="id" (click) = "onDeletePurchase()">
+                        Удалить
+                    </button>
+                </div>
+            </div>
+        </form>
+
+    </div>
+</div>
